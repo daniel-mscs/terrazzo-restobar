@@ -156,6 +156,13 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 .rating__num { font-size: 4.5rem; font-weight: 300; line-height: 1; }
 .rating__stars { color: var(--orange); font-size: 1.4rem; letter-spacing: 4px; }
 .rating__count { color: var(--muted); font-size: .9rem; }
+.reviews { display: grid; gap: 12px; margin: 0 0 56px; text-align: left; }
+.review { margin: 0; padding: 22px; background: var(--black); border: 1px solid rgba(255,255,255,.08); border-left: 2px solid var(--orange); }
+.review-cta .review p { margin: 0 0 10px; max-width: none; color: var(--white); font-size: 1rem; }
+.review cite { font-style: normal; font-size: .85rem; letter-spacing: .1em; color: var(--muted); }
+@media (min-width: 640px) {
+  .reviews { grid-template-columns: repeat(2, 1fr); }
+}
 .review-cta p:not(.eyebrow) { max-width: 42ch; margin: 0 auto 32px; color: rgba(245,243,239,.78); }
 
 /* ---------- Rodapé ---------- */
