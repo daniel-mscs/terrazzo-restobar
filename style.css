@@ -80,6 +80,9 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 
 .nav { display: none; }
 .header__actions { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 479px) {
+  .brand__name { display: none; }
+}
 .menu-toggle {
   width: 40px; height: 40px; border: 0; background: transparent; cursor: pointer;
   display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px;
