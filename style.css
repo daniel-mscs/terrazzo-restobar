@@ -150,6 +150,20 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
   margin-bottom: 40px;
 }
 
+/* Faixa rolando */
+.marquee { background: var(--orange); color: var(--black); overflow: hidden; padding: 18px 0; }
+.marquee__track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+.marquee__group { display: flex; }
+.marquee__group span {
+  display: inline-flex; align-items: center; gap: 2.8rem; margin-right: 2.8rem;
+  font-size: 1.3rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase;
+}
+.marquee__group span::after { content: "·"; font-size: 1.6rem; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
 /* Categorias */
 .cats { list-style: none; margin: 0 0 32px; padding: 0; display: grid; gap: 1px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.08); }
 .cat { background: var(--black); padding: 28px 22px; transition: background .25s; }
