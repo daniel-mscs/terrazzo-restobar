@@ -185,14 +185,14 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 .cat h3 { font-size: 1.4rem; letter-spacing: .24em; text-transform: uppercase; margin: 18px 0 6px; }
 .cat p { margin: 0; color: var(--muted); }
 
+.cat__icon {
+  display: block; width: 44px; height: 44px;
+  fill: none; stroke: var(--orange); stroke-width: 1.4;
+  stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .3s;
+}
+.cat:hover .cat__icon { transform: translateY(-4px); }
 .cat__shape { display: block; width: 34px; height: 34px; }
-.cat__shape--circle { border-radius: 50%; background: var(--orange); }
-.cat__shape--triangle { background: var(--orange); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-.cat__shape--square { background: var(--orange); }
-.cat__shape--bars { display: flex; flex-direction: column; justify-content: space-between; height: 30px; }
-.cat__shape--bars i { display: block; height: 7px; background: var(--orange); }
-.cat__shape--frame { background: var(--orange); position: relative; }
-.cat__shape--frame::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--black); }
 .cat:hover .cat__shape--frame::after { background: var(--black-3); }
 
 /* Galeria */
