@@ -78,6 +78,37 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 }
 .brand__name small { font-size: .62rem; letter-spacing: .4em; color: var(--muted); margin-top: 3px; }
 
+.nav { display: none; }
+.header__actions { display: flex; align-items: center; gap: 8px; }
+.menu-toggle {
+  width: 40px; height: 40px; border: 0; background: transparent; cursor: pointer;
+  display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px;
+}
+.menu-toggle span { display: block; height: 2px; background: var(--white); transition: transform .3s; }
+.menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-4px) rotate(-45deg); }
+.nav.is-open {
+  display: flex; flex-direction: column;
+  position: absolute; top: var(--header-h); left: 0; right: 0;
+  background: var(--black); padding: 8px 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.nav.is-open a {
+  padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+  text-decoration: none; font-size: .95rem; font-weight: 400;
+  letter-spacing: .24em; text-transform: uppercase;
+}
+@media (min-width: 960px) {
+  .menu-toggle { display: none; }
+  .nav { display: flex; gap: 32px; margin-left: auto; margin-right: 28px; }
+  .nav a {
+    text-decoration: none; font-size: .78rem; font-weight: 400;
+    letter-spacing: .22em; text-transform: uppercase;
+    opacity: .75; transition: opacity .2s, color .2s;
+  }
+  .nav a:hover { opacity: 1; color: var(--orange); }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative; overflow: hidden;
@@ -163,6 +194,21 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* Aniversário */
+.bday {
+  padding: 40px 24px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: radial-gradient(circle at 100% 0%, rgba(232,120,42,.18), transparent 55%), var(--black);
+}
+.bday__list { list-style: none; margin: 0 0 36px; padding: 0; display: grid; gap: 14px; }
+.bday__list li { display: flex; align-items: center; gap: 14px; font-size: 1.02rem; }
+.dot { width: 14px; height: 14px; flex-shrink: 0; background: var(--orange); }
+.dot--circle { border-radius: 50%; }
+.dot--triangle { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.dot--bars { background: repeating-linear-gradient(var(--orange) 0 3px, transparent 3px 5.5px); }
+@media (min-width: 960px) {
+  .bday { padding: 64px; }
+  .bday__list { grid-template-columns: repeat(2, 1fr); }
+}
 .bday { display: grid; gap: 40px; }
 .bday__deco { position: relative; height: 180px; }
 .bday__circle {

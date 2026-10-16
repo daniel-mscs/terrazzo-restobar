@@ -21,7 +21,20 @@
         <img src="assets/logo.png" alt="" class="brand__logo" />
         <span class="brand__name">Terrazzo<small>Restobar</small></span>
       </a>
-      <a href="https://wa.me/5555996463838?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Terrazzo." target="_blank" rel="noopener" class="btn btn--sm btn--primary">Reservar</a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#aniversario">Aniversário</a>
+        <a href="#opiniao">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/5555996463838?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Terrazzo." target="_blank" rel="noopener" class="btn btn--sm btn--primary">Reservar</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -155,7 +168,7 @@
   </main>
 
   <!-- RODAPÉ -->
-  <footer class="footer">
+  <footer class="footer" id="contato">
     <div class="container footer__grid">
       <div>
         <img src="assets/logo.png" alt="Terrazzo Restobar" class="footer__logo" />
