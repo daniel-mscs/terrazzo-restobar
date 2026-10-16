@@ -164,7 +164,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 .bday__circle {
   position: absolute; left: 0; top: 0; width: 170px; height: 170px; border-radius: 50%;
   padding: 3px; background: var(--grad);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
 .bday__triangle {
