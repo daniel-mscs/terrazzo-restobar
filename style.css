@@ -204,12 +204,13 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 }
 .bday__list { list-style: none; margin: 0 0 36px; padding: 0; display: grid; gap: 14px; }
 .bday__list li { display: flex; align-items: center; gap: 14px; font-size: 1.02rem; }
+.bday__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid rgba(255,255,255,.08); }
 .dot { width: 14px; height: 14px; flex-shrink: 0; background: var(--orange); }
 .dot--circle { border-radius: 50%; }
 .dot--triangle { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .dot--bars { background: repeating-linear-gradient(var(--orange) 0 3px, transparent 3px 5.5px); }
 @media (min-width: 960px) {
-  .bday { padding: 64px; }
+  .bday { padding: 64px; grid-template-columns: 1fr 1fr; align-items: center; gap: 56px; }
   .bday__list { grid-template-columns: repeat(2, 1fr); }
 }
 .bday { display: grid; gap: 40px; }
