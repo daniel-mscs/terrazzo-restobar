@@ -204,7 +204,11 @@ h1, h2, h3 { margin: 0; font-weight: 400; line-height: 1.1; }
 }
 .bday__list { list-style: none; margin: 0 0 36px; padding: 0; display: grid; gap: 14px; }
 .bday__list li { display: flex; align-items: center; gap: 14px; font-size: 1.02rem; }
-.bday__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid rgba(255,255,255,.08); }
+.bday__img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  padding: 3px; background: var(--grad);
+  box-shadow: 0 20px 50px rgba(232,120,42,.15);
+}
 .dot { width: 14px; height: 14px; flex-shrink: 0; background: var(--orange); }
 .dot--circle { border-radius: 50%; }
 .dot--triangle { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
