@@ -28,7 +28,13 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="inicio">
-      <div class="hero__ring" aria-hidden="true"></div>
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#circ">TERRAZZO · RESTOBAR · SUSHI · DRINKS ·</textPath></text>
+        </svg>
+        <img src="assets/logo.png" alt="" class="hero__badge-logo" />
+      </div>
       <div class="container hero__inner">
         <p class="eyebrow">Itaimbé Palace Hotel · Santa Maria</p>
         <h1 class="hero__title">Sabores que<br /><span class="grad">elevam a noite.</span></h1>
@@ -86,9 +92,9 @@
 
         <!-- Troque cada bloco por <img src="assets/nome.png" alt="..." loading="lazy" /> ou <video src="assets/nome.mp4" autoplay muted loop playsinline></video> -->
         <div class="gallery">
-          <figure class="gallery__item gallery__item--tall reveal"><span>Sushi</span></figure>
-          <figure class="gallery__item reveal"><span>Drinks</span></figure>
-          <figure class="gallery__item reveal"><span>Carnes</span></figure>
+          <figure class="gallery__item gallery__item--tall reveal"><img src="assets/sushi.png" alt="Sushi do Terrazzo" loading="lazy" /><span>Sushi</span></figure>
+          <figure class="gallery__item reveal"><img src="assets/drinks.png" alt="Drinks autorais" loading="lazy" /><span>Drinks</span></figure>
+          <figure class="gallery__item reveal"><img src="assets/carnes.png" alt="Prato de carne" loading="lazy" /><span>Carnes</span></figure>
           <figure class="gallery__item gallery__item--tall reveal"><video src="assets/video-ambiente.mp4" autoplay muted loop playsinline></video><span>Ambiente</span></figure>
           <figure class="gallery__item reveal"><span>Burgers</span></figure>
           <figure class="gallery__item reveal"><span>Chopp</span></figure>
@@ -101,10 +107,6 @@
     <!-- ANIVERSÁRIO -->
     <section class="section section--alt" id="aniversario">
       <div class="container bday">
-        <div class="bday__deco" aria-hidden="true">
-          <span class="bday__circle"></span>
-          <span class="bday__triangle"></span>
-        </div>
         <div class="bday__content">
           <p class="eyebrow">Seu aniversário</p>
           <h2 class="section__title">Comemore com<br />quem importa.</h2>
